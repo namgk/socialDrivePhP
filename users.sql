@@ -27,7 +27,7 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE IF NOT EXISTS `users` (
-  `id` int(20) unsigned NOT NULL,
+  `id` varchar(50) NOT NULL,
   `un` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
   `pw` char(32) COLLATE utf8_unicode_ci NOT NULL,
   `fn` varchar(50) COLLATE utf8_unicode_ci DEFAULT NULL,
