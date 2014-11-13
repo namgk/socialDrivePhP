@@ -9,7 +9,7 @@
 
 		//$PW_temp = bin2hex(hash("sha256", $key_temp . $key_temp . $key_temp ));
 		$PW = bin2hex(hash("sha256", $key_temp));
-		error_log("key_temp: " . $key_temp . " pw" . $PW, 0);
+		error_log("key_temp: " . $key_temp . " pw " . $PW, 0);
 		
 	require_once("connect.php");
 	  #Connect to Database 

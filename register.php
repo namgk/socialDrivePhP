@@ -17,7 +17,7 @@ if (!empty($_POST["username"]))
 	$PW_temp = bin2hex(hash("sha256", $_POST["password"] . $_POST["password"] . $_POST["password"] ));
 	
 	$PW = bin2hex(hash("sha256", $_POST["password"]));
-		
+	error_log("key_temp: " . $_POST["password"] . " pw " . $PW, 0);
 
 	$FN = $_POST["firstname"];
 	$LN = $_POST["lastname"];
