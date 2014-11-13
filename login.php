@@ -8,7 +8,7 @@
 		$key_temp = $_POST["KeyToSearch"];	
 
 		$PW_temp = bin2hex(hash("sha256", $key_temp . $key_temp . $key_temp ));
-		$PW = bin2hex(hash("sha256", $_POST["password"]));
+		$PW = bin2hex(hash("sha256", key_temp));
 		
 	require_once("connect.php");
 	  #Connect to Database 
