@@ -7,9 +7,8 @@
         $username = $_POST["UserNameToSearch"]; 
 		$key_temp = $_POST["KeyToSearch"];	
 
-$key = bin2hex(mhash(MHASH_SHA256, $username . $key_temp)); 
-
-
+		$PW_temp = bin2hex(hash("sha256", $key_temp . $key_temp . $key_temp ));
+		
 	require_once("connect.php");
 	  #Connect to Database 
         //$con = mysqli_connect("localhost","root","", "VSN"); 
@@ -25,7 +24,7 @@ $key = bin2hex(mhash(MHASH_SHA256, $username . $key_temp));
       
 
         #Query the database to get the user details. 
-        $userdetails = mysqli_query($con, "SELECT * FROM users WHERE un = '$username' AND pw = '$key'"); 
+        $userdetails = mysqli_query($con, "SELECT * FROM users WHERE un = '$username' AND pw = '$PW_temp'"); 
         
 
         #If no data was returned, check for any SQL errors 
