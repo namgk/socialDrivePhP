@@ -22,11 +22,11 @@ move_uploaded_file($_FILES['LogFile']['tmp_name'], $uploads_dir.'trackLog.csv');
 
 //$md5hash_id = md5($uploadid . $uploadid);
 
-$md5hash_id = bin2hex(mhash(MHASH_SHA256, $uploadid . $uploadid ));
+//$md5hash_id = bin2hex(mhash(MHASH_SHA256, $uploadid . $uploadid ));
 
-file_put_contents($uploads_dir.'info.txt', print_r($md5hash_id, true));
+//file_put_contents($uploads_dir.'info.txt', print_r($md5hash_id, true));
 
-echo $md5hash_id;
+//echo $md5hash_id;
 
 
 
